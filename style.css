@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.container {
+    margin: 4.5em auto 4.75em;
+}
+
+.top-container {
+    text-align: center;
+}
+
+.title--normal-font {
+    font-weight: 200;
+}
+
+.title--bold-font {
+    font-weight: 600;
+}
+
+.top-container p {
+    max-width: 36em;
+    font-weight: 400;
+    margin: 0.75em auto;
+    margin-bottom: 1.5em;
+    padding: 0.5em;
+}
+
+.inner-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    margin: 5em 7em;
+}
+
+.cards {
+    display: flex;
+    --modifier: calc(50ch - 100%);
+    flex-grow: 3;
+    flex-shrink: 1;
+    flex-basis: calc(var(--modifier) * 999);
+    border-radius: 0.5em;
+    border: transparent;
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.23);
+    background-color: white;
+    padding: 1.5em 2.5em;
+    font-size: clamp(0.7em, 2vw, 1em);
+    transition: all .3s;
+}
+
+.cards:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+    color: white;
+}
+
+.cards__content > *  {
+    margin-top: 1em;
+}
+
+.cards__item--blue {
+    grid-column: 1/2;
+    grid-row: 3/5;
+    border-top: 0.5em solid hsl(180, 62%, 55%);
+}
+
+.cards__item--blue:hover {
+    background-color: hsl(180, 62%, 55%);
+}
+
+.cards__item--red {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    border-top: 0.5em solid hsl(0, 78%, 62%);
+}
+
+.cards__item--red:hover {
+    background-color: hsl(0, 78%, 62%);
+}
+
+.cards__item--orange {
+    grid-column: 2/3;
+    grid-row: 4/9;
+    border-top: 0.5em solid hsl(34, 97%, 64%);
+}
+
+.cards__item--orange:hover {
+    background-color: hsl(34, 97%, 64%);
+}
+
+.cards__item--dark-blue {
+    grid-column: 3/4;
+    grid-row: 3/5;
+    border-top: 0.5em solid hsl(212, 86%, 64%);
+}
+
+.cards__item--dark-blue:hover {
+    background-color: hsl(212, 86%, 64%);
+}
+
+.cards__content {
+    flex-grow: 4;
+    flex-shrink: 1;
+    flex-basis: calc(var(--modifier) * 999);
+}
+
+.cards__img img {
+    float: inline-end;
+    max-width: 100%;
+    height: auto;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 768px) {
+    .inner-container {
+        margin: 0em 0em;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
