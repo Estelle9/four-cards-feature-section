@@ -128,8 +128,16 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    .container {
+        margin-top: 2em;
+    }
+    
+    .top-container h1 {
+        font-size: 1.7em;
+    }
+    
     .inner-container {
-        margin: 0em 0em;
+        margin: 2em;
         display: grid;
         grid-template-columns: 1fr;
     }
